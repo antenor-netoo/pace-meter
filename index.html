@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACE METER</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel" src="./script/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-mono bg-[#2b2a27] pt-20">
+    <div id="menu"></div>
+
+    <div class="relative w-full">
+        <img src="./src/images/banner.jpg" class="w-full min-h-[300px] max-h-[400px] object-cover" />
+        <div class="absolute inset-0 
+                    before:content-[''] before:absolute before:inset-0 
+                    before:bg-black/50 before:z-10">
+        </div>
+        <div class="flex flex-col absolute inset-0 z-20 flex items-center justify-center 
+                   text-white text-[92px] font-bold drop-shadow-xl">
+            <h1>
+                PACE METER
+            </h1>
+            <small class="text-sm text-[#aec80d] italic">CADA PASSO NA PALMA DA MÃO.</small>
+        </div>
+    </div>
+</body>
+
+
+</html>
