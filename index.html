@@ -9,27 +9,48 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script type="text/babel" src="./script/script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/babel" src="./script/script.js"></script>
 </head>
 
 <body class="font-mono bg-[#2b2a27] pt-20">
     <div id="menu"></div>
-
     <div class="relative w-full">
-        <img src="./src/images/banner.jpg" class="w-full min-h-[300px] max-h-[400px] object-cover" />
+        <img src="./src/images/banner.jpg"
+            class="w-full min-h-[250px] max-h-[350px] md:min-h-[300px] md:max-h-[400px] object-cover" />
         <div class="absolute inset-0 
                     before:content-[''] before:absolute before:inset-0 
                     before:bg-black/50 before:z-10">
         </div>
         <div class="flex flex-col absolute inset-0 z-20 flex items-center justify-center 
-                   text-white text-[92px] font-bold drop-shadow-xl">
+                   text-white text-[48px] md:text-[92px] font-bold drop-shadow-xl">
             <h1>
                 PACE METER
             </h1>
             <small class="text-sm text-[#aec80d] italic">CADA PASSO NA PALMA DA MÃO.</small>
         </div>
     </div>
+    <section class="w-full py-20 bg-[#2b2a27] flex items-center justify-center">
+        <div class="max-w-4xl text-center px-4">
+            <h1 class="text-4xl font-bold text-[#aec80d] mb-6">
+                Quem Somos
+            </h1>
+            <div class="flex flex-row">
+                <img src="./src/images/silhueta.png" class="h-48 hidden md:block" />
+                <div>
+                    <p class="text-gray-300 text-lg md:text-left text-center leading-relaxed mb-10">
+                        Somos uma equipe apaixonada por tecnologia, dedicada a criar soluções
+                        inteligentes e eficientes. Nosso objetivo é transformar ideias em realidade,
+                        desenvolvendo ferramentas que impactam positivamente o dia a dia das pessoas.
+                    </p>
+                </div>
+            </div>
+            <a href="./quem-somos.html" class="inline-block px-8 py-3 rounded-lg font-bold text-[#2b2a27] bg-[#aec80d]
+                  transition-all duration-300 hover:bg-[#c6e976] hover:scale-105 hover:shadow-lg">
+                SAIBA MAIS
+            </a>
+    </section>
+
 </body>
 
 
