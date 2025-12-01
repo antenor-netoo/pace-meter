@@ -1,44 +1,73 @@
-ReactDOM.render(
-    <div class="fixed flex w-full h-20 bg-[#1a1d1a] top-0 left-0 items-center justify-between shadow-lg z-50">
-        <div>
-            <a href="/index.html" class="flex items-center py-2 pl-8 text-center gap-2 transition duration-300 hover:scale-110">
-                <img src="https://img.icons8.com/?size=40&id=813&format=png&color=aec80d" />
-                <h1 class="text-[#aec80d] font-bold md:text-3xl">PACE METER</h1>
-            </a>
-        </div>
+let menuAberto = false;
 
-        <div class="h-full">
-            <div class="flex h-full items-center md:hidden pr-4">
-                <img src="https://img.icons8.com/?size=30&id=36389&format=png&color=aec80d" />
+function renderMenu() {
+    ReactDOM.render(
+        <div class="fixed flex w-full h-20 bg-[#1a1d1a] top-0 left-0 items-center justify-between shadow-lg z-50">
+            <div>
+                <a href="/index.html" class="flex items-center py-2 pl-8 text-center gap-2 transition duration-300 hover:scale-110">
+                    <img src="https://img.icons8.com/?size=40&id=813&format=png&color=aec80d" />
+                    <h1 class="text-[#aec80d] font-bold md:text-3xl">PACE METER</h1>
+                </a>
             </div>
-            <ul class="hidden h-full items-center md:flex">
-                <li class="group flex items-center h-full text-center font-bold text-[#aec80d] border-b-4 border-transparent px-4 
-                       transition-all duration-300 hover:border-[#aec80d]">
-                    <a class="h-full flex items-center transition-all duration-300 
-                          group-hover:scale-110 group-hover:translate-y-[-2px]" href="/pages/sobre-nos.html">
-                        SOBRE NÓS
-                    </a>
-                </li>
-                <li class="group flex items-center h-full text-center font-bold text-[#aec80d] border-b-4 border-transparent px-4 
-                       transition-all duration-300 hover:border-[#aec80d]">
-                    <a class="h-full flex items-center transition-all duration-300 
-                          group-hover:scale-110 group-hover:translate-y-[-2px]" href="/pages/nossos-precos.html">
-                        NOSSOS PREÇOS
-                    </a>
-                </li>
 
-                <li class="group flex items-center h-full text-center font-bold text-[#aec80d] border-b-4 border-transparent px-4 
-                       transition-all duration-300 hover:border-[#aec80d]">
-                    <a class="h-full flex items-center transition-all duration-300 
-                          group-hover:scale-110 group-hover:translate-y-[-2px]" href="/pages/fale-conosco.html">
-                        FALE CONOSCO
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>,
-    document.getElementById('menu')
-)
+            <div class="h-full">
+                <div class="flex h-full items-center md:hidden pr-4">
+                    <button onClick={() => {
+                        menuAberto = !menuAberto;
+                        renderMenu();
+                    }}>
+                        <img src="https://img.icons8.com/?size=30&id=36389&format=png&color=aec80d" />
+                    </button>
+                </div>
+
+                <ul
+                    class={
+                        "absolute top-20 right-0 w-2/3 h-[2000px] bg-[#1a1d1aee] flex flex-col md:hidden shadow-lg border-t border-[#aec80d]/20 " +
+                        "transition-transform duration-300 " +
+                        (menuAberto ? "translate-x-0" : "translate-x-full")
+                    }
+                >
+                    <li class="p-4 text-[#aec80d] border-b border-[#aec80d]/20">
+                        <a href="/pages/sobre-nos.html">SOBRE NÓS</a>
+                    </li>
+                    <li class="p-4 text-[#aec80d] border-b border-[#aec80d]/20">
+                        <a href="/pages/nossos-precos.html">NOSSOS PREÇOS</a>
+                    </li>
+                    <li class="p-4 text-[#aec80d]">
+                        <a href="/pages/fale-conosco.html">FALE CONOSCO</a>
+                    </li>
+                </ul>
+
+                <ul class="hidden h-full items-center md:flex">
+                    <li class="group flex items-center h-full text-center font-bold text-[#aec80d] border-b-4 border-transparent px-4 
+                           transition-all duration-300 hover:border-[#aec80d]">
+                        <a class="h-full flex items-center transition-all duration-300 
+                              group-hover:scale-110 group-hover:translate-y-[-2px]" href="/pages/sobre-nos.html">
+                            SOBRE NÓS
+                        </a>
+                    </li>
+                    <li class="group flex items-center h-full text-center font-bold text-[#aec80d] border-b-4 border-transparent px-4 
+                           transition-all duration-300 hover:border-[#aec80d]">
+                        <a class="h-full flex items-center transition-all duration-300 
+                              group-hover:scale-110 group-hover:translate-y-[-2px]" href="/pages/nossos-precos.html">
+                            NOSSOS PREÇOS
+                        </a>
+                    </li>
+                    <li class="group flex items-center h-full text-center font-bold text-[#aec80d] border-b-4 border-transparent px-4 
+                           transition-all duration-300 hover:border-[#aec80d]">
+                        <a class="h-full flex items-center transition-all duration-300 
+                              group-hover:scale-110 group-hover:translate-y-[-2px]" href="/pages/fale-conosco.html">
+                            FALE CONOSCO
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>,
+        document.getElementById('menu')
+    );
+}
+
+renderMenu();
 
 ReactDOM.render(
     <footer class="w-full bg-[#1a1d1a] text-gray-300 py-12 border-t border-[#aec80d]/20">
@@ -62,12 +91,12 @@ ReactDOM.render(
                             Sobre nós
                         </a>
                     </li>
-                     <li class="flex items-center justify-center">
+                    <li class="flex items-center justify-center">
                         <a href="/pages/nossos-precos.html" class="hover:text-[#aec80d] transition duration-300">
                             Nossos preços
                         </a>
                     </li>
-                     <li class="flex items-center justify-center">
+                    <li class="flex items-center justify-center">
                         <a href="/pages/fale-conosco.html" class="hover:text-[#aec80d] transition duration-300">
                             Fale conosco
                         </a>
