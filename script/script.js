@@ -88,7 +88,7 @@ ReactDOM.render(
                         <img src="https://img.icons8.com/?size=40&id=13963&format=png&color=aec80d" class="h-8" />
                     </a>
                     <a href="#" class="hover:scale-110 transition">
-                        <img src="https://img.icons8.com/?size=40&id=114441&format=png&color=aec80d" class="h-8" />
+                        <img src="https://img.icons8.com/?size=40&id=Xy10Jcu1L2Su&format=png&color=000000" class="h-8" />
                     </a>
                 </div>
             </div>
