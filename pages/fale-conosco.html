@@ -87,7 +87,10 @@
                                 <select
                                     className="w-full p-2 border rounded"
                                     value={opcao}
-                                    onChange={(e) => setOpcao(e.target.value)}
+                                    onChange={(e) => {
+                                        setOpcao(e.target.value);
+                                        setFormulario(e.target.value);
+                                    }}
                                 >
                                     <option value="">Selecione uma opção</option>
                                     <option value="atendimento">Atendimento</option>
@@ -95,13 +98,6 @@
                                     <option value="reclamacao">Reclamação ou Sugestão</option>
                                     <option value="contato">Dados para Contato</option>
                                 </select>
-
-                                <button
-                                    onClick={abrirFormulario}
-                                    className="w-full mt-3 px-4 py-2 bg-green-700 text-white rounded"
-                                >
-                                    Abrir
-                                </button>
 
                                 {renderFormulario()}
                             </div>
